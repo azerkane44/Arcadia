@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+
+	</head>
+	<body>
+		{# templates/base.html.twig #}
+		{% include '/pages/header.html.twig' %}
+
+		<!-- Service du garage-->
+		<main>
+			<div class="descarcadia">
+				<div class="title">
+					<hr class="ligne">
+					<h1>Acrcadia Arcadia est un zoo situé en France près de la forêt de Brocéliande, en bretagne depuis 1960.</h1>
+					<hr class="ligne">
+					<div class="#">
+						<div class="MainImageContainer">
+							<img src="/images/elephants-5661842_1280.jpg" id="mainimg" alt="image delephant"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<h5 id="titredeshabitats">Habitats du zoo</h5>
+				<hr id="lignehabitat">
+			</div>
+
+			<div class="Expohabitat" id="habitat-jungle">
+				<h5 class="titrehabitat" id="titre-habitat-jungle">Jungle</h5>
+				<div class="slider">
+					<div class="slide active">
+						<img src="/images/Imagehabitatjungle.jpg" alt="#" class="habitat-image" data-habitat="habitat-jungle"/>
+					</div>
+					<div class="slide">
+						<img src="/images/tiger-1822537_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-jungle"/>
+					</div>
+					<div class="slide">
+						<img src="/images/gorilla-3373856_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-jungle"/>
+					</div>
+					<div class="slide">
+						<img src="/images/panther-5739740_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-jungle"/>
+					</div>
+					<div class="slide">
+						<img src="/images/orang-utan-3534147_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-jungle"/>
+					</div>
+					<a class="prev" onclick="prevSlide('habitat-jungle')">&lt;</a>
+					<a class="next" onclick="nextSlide('habitat-jungle')">&gt;</a>
+				</div>
+
+				<div class="deschabitat" style="display: none;" id="deschabitat-jungle">
+					<h6 class="titrehabitat">Description</h6>
+					<p id="description-text-jungle"></p>
+					<!-- Pour la description de l'habitat -->
+					<p id="extra-text-jungle"></p>
+					<!-- Pour les animaux -->
+				</div>
+
+			</div>
+
+			<div class="Expohabitat" id="habitat-foret">
+				<h5 class="titrehabitat" id="titre-habitat-foret">Forêt</h5>
+				<div class="slider">
+					<div class="slide active">
+						<img src="/images/antarctica-8697791_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-foret"/>
+					</div>
+					<div class="slide">
+						<img src="/images/louparctique.jpg" alt="#" class="habitat-image" data-habitat="habitat-foret"/>
+					</div>
+					<div class="slide">
+						<img src="/images/renardantarctique.jpg" alt="#" class="habitat-image" data-habitat="habitat-foret"/>
+					</div>
+					<div class="slide">
+						<img src="/images/grey-seal-3281160_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-foret"/>
+					</div>
+					<div class="slide">
+						<img src="/images/ours polaire.jpg" alt="#" class="habitat-image" data-habitat="habitat-foret"/>
+					</div>
+					<a class="prev" onclick="prevSlide('habitat-foret')">&lt;</a>
+					<a class="next" onclick="nextSlide('habitat-foret')">&gt;</a>
+				</div>
+
+				<div class="deschabitat" style="display: none;" id="deschabitat-foret">
+					<h6 class="titrehabitat">Description</h6>
+					<p id="description-text-foret"></p>
+					<p id="extra-text-foret"></p>
+				</div>
+			</div>
+
+			<div class="Expohabitat" id="habitat-savane">
+				<h5 class="titrehabitat" id="titre-habitat-savane">Savane</h5>
+				<div class="slider">
+					<div class="slide active">
+						<img src="/images/kenya.jpg" alt="#" class="habitat-image" data-habitat="habitat-savane"/>
+					</div>
+					<div class="slide">
+						<img src="/images/lion-805084_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-savane"/>
+					</div>
+					<div class="slide">
+						<img src="/images/masai-giraffe-7235505_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-savane"/>
+					</div>
+					<div class="slide">
+						<img src="/images/zebra-3758310_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-savane"/>
+					</div>
+					<div class="slide">
+						<img src="/images/rhino-6065480_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-savane"/>
+					</div>
+					<a class="prev" onclick="prevSlide('habitat-savane')">&lt;</a>
+					<a class="next" onclick="nextSlide('habitat-savane')">&gt;</a>
+				</div>
+
+				<div class="deschabitat" style="display: none;" id="deschabitat-savane">
+					<h6 class="titrehabitat">Description</h6>
+					<p id="description-text-savane"></p>
+					<p id="extra-text-savane"></p>
+				</div>
+			</div>
+
+			<div class="Expohabitat" id="habitat-ocean">
+				<h5 class="titrehabitat" id="titre-habitat-ocean">Océan</h5>
+				<div class="slider">
+					<div class="slide active">
+						<img src="/images/océan.jpg" alt="#" class="habitat-image" data-habitat="habitat-ocean"/>
+					</div>
+					<div class="slide">
+						<img src="/images/dolphin-3416533_1280.jpg" alt="#" class="habitat-image" data-habitat="habitat-ocean"/>
+					</div>
+					<div class="slide">
+						<img src="/images//requin-marteau.jpg" alt="#" class="habitat-image" data-habitat="habitat-ocean"/>
+					</div>
+					<div class="slide">
+						<img src="/images/méduse.jpg" alt="#" class="habitat-image" data-habitat="habitat-ocean"/>
+					</div>
+					<div class="slide">
+						<img src="/images/tortue-mer.jpg" alt="#" class="habitat-image" data-habitat="habitat-ocean"/>
+					</div>
+					<a class="prev" onclick="prevSlide('habitat-ocean')">&lt;</a>
+					<a class="next" onclick="nextSlide('habitat-ocean')">&gt;</a>
+				</div>
+
+				<div class="deschabitat" style="display: none;" id="deschabitat-ocean">
+					<h6 class="titrehabitat">Description</h6>
+					<p id="description-text-ocean"></p>
+					<p id="extra-text-ocean"></p>
+				</div>
+			</div>
+
+		</main>
+
+		<div
+			class="main-content"><!-- Contenu principal de ta page (comme ton tableau, etc.) -->
+		</div>
+
+		<footer>
+			<p>© 2024 Mon Projet. Tous droits réservés.</p>
+
+			<div class="hours">
+				<p>
+					<strong>Horaires d'ouverture :</strong>
+				</p>
+				<p>Lundi - Vendredi : 9h00 - 18h00</p>
+				<p>Samedi : 10h00 - 16h00</p>
+				<p>Dimanche : Fermé</p>
+			</div>
+		</footer>
+
+		<script src="/assets/js/habitat.js"></script>
+	</body>
+</html>
