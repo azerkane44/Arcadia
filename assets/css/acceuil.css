@@ -1,0 +1,298 @@
+#mainimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 10px;
+
+  border-radius: 20px;
+}
+/* Zoo desc title */
+.title {
+  margin-bottom: 20px;
+}
+/* title ligne*/
+#ligne {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+.title h1 {
+  display: flex;
+  font-size: 20px;
+  color: #fff;
+  justify-content: center;
+  color: #020202;
+}
+
+.MainImageContainer {
+  background-color: #4b7f52;
+  padding: 20px;
+}
+
+.desczoo {
+  background-color: #4b7f52;
+}
+
+/* Image ecologie */
+#imageecologie {
+  float: left;
+  width: 90px;
+}
+.desczoo h2 {
+  display: flex;
+  justify-content: center;
+}
+.molette p {
+  padding-top: 20px;
+  margin-left: 15px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: black;
+}
+/*Image du zoo */
+.wraper {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  background-color: white;
+}
+#blocimg1 {
+  position: absolute;
+  top: 8%;
+
+  left: 10px;
+}
+
+#blocimg2 {
+  position: absolute;
+  top: 5%;
+  background-color: white;
+  left: 40%;
+}
+#blocimg3 {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  background-color: white;
+}
+#blocimg4 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  background-color: white;
+}
+#blocimg5 {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  background-color: white;
+}
+
+#imgzoo1 {
+  width: 600px;
+  height: 500px;
+}
+#imgzoo2,
+#imgzoo3,
+#imgzoo4,
+#imgzoo5 {
+  width: 400px;
+}
+
+/* Fin image de présentation du zoo*/
+/*Service du zoo */
+
+/* Logo de service*/
+.molette {
+  flex-direction: row;
+  display: flex;
+  margin: 20px 0px 20px;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+/* Tiltle prestation*/
+#prestation {
+  margin-left: 15px;
+  margin-top: 40px;
+}
+
+/* image prestation */
+.molette img {
+  width: 5%;
+  margin-left: 15px;
+  border-radius: 15px;
+}
+
+@media (max-width: 750px) {
+  .molette p {
+    margin-bottom: 20px;
+    font-size: medium;
+  }
+  .molette img {
+    width: 40px;
+    height: 50px;
+  }
+}
+@media (max-width: 1100) {
+  #siezpara p {
+    margin-bottom: 20px;
+    font-size: medium;
+  }
+}
+
+/*  Bloc d'habiat et animaux*/
+.ExpoVoiture {
+  display: inline-block;
+  width: 30%;
+  border: solid 1px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 200px;
+  border-radius: 15px;
+  background-color: #4b7f52;
+  -webkit-box-shadow: -1px 1px 5px 9px rgba(14, 0, 0, 0.5);
+  -moz-box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 1px 5px 9px rgba(214, 211, 240, 0.8);
+}
+
+.ExpoVoiture img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+.information {
+  margin-left: 10px;
+  color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ExpoVoiture {
+    width: 30%;
+    margin: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .ExpoVoiture {
+    width: 28%;
+    margin: 15px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ExpoVoiture {
+    width: 27%;
+    margin: 15px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 755px) {
+  .ExpoVoiture {
+    width: 75%;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ExpoVoiture {
+    width: 75%;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50;
+    margin-bottom: 30px;
+  }
+}
+
+/*Avis */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.snip1533 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #9e9e9e;
+  display: inline-block;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  margin-left: 160px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 5px solid #d2652d;
+}
+
+.snip1533 *,
+.snip1533 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.snip1533 figcaption {
+  padding: 13% 10% 12%;
+}
+
+.snip1533 figcaption:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #d2652d;
+  content: "\f10e";
+  font-family: "FontAwesome";
+  font-size: 32px;
+  font-style: normal;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+.snip1533 h3 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 10px 0 5px;
+}
+.snip1533 p {
+  color: #000000;
+}
+.snip1533 h4 {
+  color: #d2652d;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.snip1533 blockquote {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
