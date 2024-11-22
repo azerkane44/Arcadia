@@ -5,7 +5,7 @@ Voici un exemple de fichier `README.md` pour votre projet Symfony :
 # Projet Arcadia - Application Symfony
 
 ## Description
-**Arcadia** est une application web développée avec Symfony 7. Elle permet la gestion des utilisateurs (administrateurs, vétérinaires et employés) et des habitats d'animaux.
+**Arcadia** est une application web développée avec Symfony 7.Déployée via Hostinger, elle permet la gestion des utilisateurs (administrateurs, vétérinaires et employés) et des habitats d'animaux.
 L'application offre des fonctionnalités spécifiques selon les rôles des utilisateurs, comme la création, la modification et la suppression d'habitats ou la gestion des utilisateurs.
 
 ---
