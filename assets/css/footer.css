@@ -1,0 +1,56 @@
+/* S'assurer que le contenu remplit la hauteur de la page */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* Le contenu principal prend toute la hauteur restante */
+main {
+  flex: 1;
+}
+
+footer {
+  padding: 40px 0;
+  color: #ffffff; /* Texte en blanc pour un bon contraste */
+  background-color: #000000; /* Couleur de fond du footer en vert */
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  font-family: Arial, sans-serif; /* Choix d'une police simple et lisible */
+}
+
+footer p {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #000000; /* Fond noir pour le texte principal */
+  color: #ffffff; /* Texte en blanc pour le contraste */
+}
+
+footer .hours {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+footer .hours p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #ffffff; /* Liens en blanc */
+  text-decoration: none; /* Pas de soulignement pour les liens */
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #d1ffd7; /* Un vert très clair pour l'effet hover */
+}
