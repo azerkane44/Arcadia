@@ -1,0 +1,179 @@
+-- Requête SQL permettant de stocker les utilisateurs
+
+CREATE TABLE user (
+    id INT AUTO_INCREMENT NOT NULL,                              -- Clé primaire auto-incrémentée
+    email VARCHAR(180) NOT NULL,                                 -- Adresse email avec longueur maximale de 180 caractères
+    roles JSON NOT NULL CHECK (JSON_VALID(roles)),               -- Champ JSON pour les rôles avec vérification de validité JSON
+    password VARCHAR(255) NOT NULL,                              -- Mot de passe haché
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,     -- Date de création 
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP               -- Date de mise à jour
+        ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE INDEX UNIQ_IDENTIFIER_EMAIL (email),                  -- Contrainte d'unicité pour l'email
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-- Requête SQL contenat les animaux du zoo
+
+-- Création de la table Animal
+CREATE TABLE animal (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    prenom VARCHAR(80) DEFAULT NULL,
+    race VARCHAR(255) NOT NULL,
+    imageanimaux VARCHAR(255) NOT NULL,
+    habitatanimaux VARCHAR(255) NOT NULL
+);
+
+-- Requêtes  pour insérer des données exemple
+INSERT INTO animal (prenom, race, imageanimaux, habitatanimaux)
+VALUES 
+('Simba', 'Lion', 'lion.jpg', 'Savane'),
+('Manny', 'Éléphant', 'elephant.jpg', 'Plaine'),
+('Nemo', 'Poisson-clown', 'fish.jpg', 'Océan'),
+('Zazu', 'Perroquet', 'parrot.jpg', 'Forêt tropicale');
+
+UPDATE animal
+SET prenom = 'Leo'
+WHERE id = 1;
+
+-- Suppression d'un enregistrement
+DELETE FROM animal
+WHERE id = 4;
+
+-- Création de la table Contact
+CREATE TABLE contact (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(255) DEFAULT NULL,
+    email VARCHAR(180) NOT NULL,
+    message TEXT NOT NULL,
+    created_at DATETIME NOT NULL
+);
+
+-- Requêtes SQl dédier dédiée à aux contact
+INSERT INTO contact (titre, email, message, created_at)
+VALUES 
+('Demande d\'information', 'user1@example.com', 'Bonjour, j\'aimerais obtenir des informations sur votre service.', NOW()),
+('Problème technique', 'user2@example.com', 'Je rencontre un problème avec votre site web.', NOW()),
+('Offre de partenariat', 'user3@example.com', 'Nous souhaiterions collaborer avec vous.', NOW());
+
+-- Sélection des données
+SELECT * FROM contact;
+
+-- Mise à jour d'un enregistrement
+UPDATE contact
+SET titre = 'Demande urgente'
+WHERE id = 1;
+
+-- Suppression d'un enregistrement
+DELETE FROM contact
+WHERE id = 3;
+
+
+
+
+-- Reqête SQL dédiée aux Habitat du zoo
+
+-- Création de la table Habitat
+CREATE TABLE habitat (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
+    commentaire_habitat TEXT DEFAULT NULL,
+    imagefield VARCHAR(255) NOT NULL
+);
+
+-- Requêtes supplémentaires pour insérer des données exemple
+INSERT INTO habitat (nom, description, commentaire_habitat, imagefield)
+VALUES 
+('Savane', 'Un grand espace avec des herbes hautes et des acacias.', 'Idéal pour les lions et les girafes.', 'savane.jpg'),
+('Forêt tropicale', 'Un habitat dense avec des arbres, des lianes et une humidité élevée.', 'Convient aux primates et oiseaux tropicaux.', 'foret_tropicale.jpg'),
+('Désert', 'Un espace aride avec des dunes de sable et peu de végétation.', 'Parfait pour les reptiles et les chameaux.', 'desert.jpg');
+
+-- Sélection des données
+SELECT * FROM habitat;
+
+-- Mise à jour d'un enregistrement
+UPDATE habitat
+SET commentaire_habitat = 'Nouveau commentaire pour la Savane'
+WHERE id = 1;
+
+-- Suppression d'un enregistrement
+DELETE FROM habitat
+WHERE id = 3;
+
+
+
+
+
+
+
+
+-- Requête SQL dédiée au rapport vétérinaire
+
+-- Création de la table RapportVeterinaire
+CREATE TABLE rapport_veterinaire (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    etat VARCHAR(80) NOT NULL,
+    nourriture VARCHAR(255) NOT NULL,
+    grammage DECIMAL(5, 0) NOT NULL,
+    date_passage DATETIME NOT NULL,
+    detailsetat TEXT DEFAULT NULL,
+    animal VARCHAR(150) DEFAULT NULL
+);
+
+-- Requêtes supplémentaires pour insérer des données d'exemple
+INSERT INTO rapport_veterinaire (etat, nourriture, grammage, date_passage, detailsetat, animal)
+VALUES
+('Bonne santé', 'Foin', 300, '2024-12-05 10:00:00', 'L’animal est en bonne forme et actif.', 'Lapin'),
+('Fatigué', 'Viande crue', 500, '2024-12-04 15:30:00', 'L’animal semble fatigué mais mange bien.', 'Lion'),
+('Blessé', 'Graines', 200, '2024-12-03 09:45:00', 'Blessure sur la patte avant droite.', 'Oiseau');
+
+-- Sélection des données
+SELECT * FROM rapport_veterinaire;
+
+-- Mise à jour d'un enregistrement
+UPDATE rapport_veterinaire
+SET etat = 'Excellente santé', detailsetat = 'Aucune observation particulière.'
+WHERE id = 1;
+
+-- Suppression d'un enregistrement
+DELETE FROM rapport_veterinaire
+WHERE id = 3;
+
+--Requête SQL dédiée aux services du zoo
+
+
+-- Création de la table Service
+CREATE TABLE service (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL
+);
+
+-- Requêtes supplémentaires pour insérer des données d'exemple
+INSERT INTO service (nom, description)
+VALUES
+('Soins vétérinaires', 'Offrir des consultations et traitements pour les animaux malades.'),
+('Garderie', 'Prendre soin des animaux lorsque leurs propriétaires sont absents.'),
+('Toilettage', 'Fournir des services de nettoyage et de soins esthétiques pour animaux.');
+
+-- Sélection des données
+SELECT * FROM service;
+
+-- Mise à jour d'un enregistrement
+UPDATE service
+SET description = 'Services complets pour les soins médicaux des animaux.'
+WHERE id = 1;
+
+-- Suppression d'un enregistrement
+DELETE FROM service
+WHERE id = 3;
+
+
+
+
+
+
