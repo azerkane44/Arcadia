@@ -22,7 +22,7 @@ class HabitatType extends AbstractType
             ->add('image', FileType::class, [
                 'label' => 'Image de l\'habitat (fichier image)',
                 'mapped' => false, // Indique que ce champ n'est pas directement lié à l'entité
-                'required' => false, // Rendez-le optionnel si nécessaire
+                'required' => false, 
                 'constraints' => [
                     new File([
                         'maxSize' => '2M',
